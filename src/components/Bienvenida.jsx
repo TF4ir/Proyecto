@@ -7,8 +7,7 @@ export default function Bienvenida({ onStart, onConsultar, onNormativa }) {
       <header className="header">
         <h1>🇵🇪 SITFAVE</h1>
         <h2>
-          Sistema Integral de Formalización de Vendedores Ambulantes y No
-          Sedentarios
+          Sistema Integral de Formalización de Vendedores Ambulantes
         </h2>
       </header>
 
@@ -17,8 +16,7 @@ export default function Bienvenida({ onStart, onConsultar, onNormativa }) {
           <h3>¡Bienvenido al Proceso de Formalización Municipal!</h3>
           <p>
             Este sistema te guiará a través de los pasos necesarios para obtener tu{" "}
-            <strong>Autorización Municipal Temporal</strong> no sedentaria en el
-            distrito.
+            <strong>Autorización Municipal Temporal</strong>
           </p>
 
           <blockquote>

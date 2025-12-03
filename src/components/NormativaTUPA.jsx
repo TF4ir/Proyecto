@@ -22,10 +22,10 @@ export default function NormativaTUPA({ onBackToHome }) {
         <h4>Requisitos Mínimos para la Formalización (Simulados)</h4>
         <ul>
           <li>Tener 18 años o más y contar con DNI/CE vigente.</li>
-          <li>Haber ejercido actividad comercial en el distrito por un mínimo de **seis (6) meses continuos**.</li>
-          <li>Comprometerse a tramitar el **Carné de Sanidad Municipal** si manipula alimentos.</li>
-          <li>Aceptar la ubicación del puesto asignada por el sistema georreferenciado para contribuir al **Ordenamiento Urbano**.</li>
-          <li>El proceso de formalización es un requisito para obtener la **Autorización Municipal Temporal** no sedentaria.</li>
+          <li>Haber ejercido actividad comercial en el distrito por un mínimo de <strong>seis (6) meses continuos.</strong></li>
+          <li>Comprometerse a tramitar el <strong>Carné de Sanidad Municipal</strong> si manipula alimentos.</li>
+          <li>Aceptar la ubicación del puesto asignada por el sistema georreferenciado para contribuir al <strong>Ordenamiento Urbano.</strong></li>
+          <li>El proceso de formalización es un requisito para obtener la <strong>Autorización Municipal Temporal.</strong></li>
         </ul>
 
         <h4>Normativa de Referencia</h4>

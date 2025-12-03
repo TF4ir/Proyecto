@@ -26,11 +26,11 @@ export default function ConsultaEstado({ onBackToHome }) {
           </div>
 
           <div className="form-group">
-            <label htmlFor="consulta-code">Código de Solicitud (Ej. SITFAVE-2025-A105)</label>
+            <label htmlFor="consulta-code">Código de Solicitud (Ej. AV-A1-105)</label>
             <input
               type="text"
               id="consulta-code"
-              placeholder="Ej. SITFAVE-2025-A105"
+              placeholder="Ej. AV-A1-105"
               required
             />
           </div>

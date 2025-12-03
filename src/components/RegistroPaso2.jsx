@@ -74,7 +74,7 @@ function RegistroPaso2({ onBack, onNext }) {
           <div className="form-group checkbox-group">
             <input type="checkbox" id="sanidad" required />
             <label htmlFor="sanidad">
-              Me comprometo a tramitar el **Carné de Sanidad Municipal** en caso de realizar
+              Me comprometo a tramitar el <strong>Carné de Sanidad Municipal</strong> en caso de realizar
               actividades de preparación o manipulación de alimentos.
             </label>
           </div>

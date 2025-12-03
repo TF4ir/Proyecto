@@ -26,7 +26,7 @@ function RegistroPaso5({ onStartAgain, puestoId }) {
             Su nuevo Puesto Temporal de Venta ha sido asignado con el código: <strong>{puestoId}</strong>.
           </p>
           <p>
-            Recibirá su **Permiso Digital** (con el Código QR de geolocalización) en el correo electrónico y por SMS en un plazo de **24 horas hábiles**, luego de la verificación de los documentos.
+            Recibirá su <strong>Permiso Digital</strong> (con el Código QR de geolocalización) en el correo electrónico y por SMS en un plazo de <strong>24 horas hábiles</strong>, luego de la verificación de los documentos.
           </p>
           <p>
             <strong>¡Felicidades! Usted es ahora un comerciante formalizado.</strong>
