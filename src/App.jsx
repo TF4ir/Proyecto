@@ -1,14 +1,14 @@
-// src/App.jsx
-
 import React, { useState } from "react";
-import Bienvenida from "./components/Bienvenida"; // Debes crear este archivo
+import Bienvenida from "./components/Bienvenida";
 import RegistroPaso1 from "./components/RegistroPaso1";
 import RegistroPaso2 from "./components/RegistroPaso2";
 import RegistroPaso3 from "./components/RegistroPaso3";
 import RegistroPaso4 from "./components/RegistroPaso4";
 import RegistroPaso5 from "./components/RegistroPaso5";
-import Header from "./components/Header"; // Si los creaste
-import Footer from "./components/Footer"; // Si los creaste
+import ConsultaEstado from "./components/ConsultaEstado";
+import NormativaTUPA from "./components/NormativaTUPA";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
 import "./index.css"; // Estilos globales
 
 // Define los estados de la vista
@@ -19,7 +19,8 @@ const VISTAS = {
   PASO_3: "paso3",
   PASO_4: "paso4",
   PASO_5: "paso5",
-  // ... puedes añadir más pasos: 'paso3', 'finalizado'
+  CONSULTA: "consulta",
+  NORMATIVA: "normativa",
 };
 
 function App() {
@@ -27,16 +28,16 @@ function App() {
   const [vistaActual, setVistaActual] = useState(VISTAS.INICIO);
 
   const [datosFormulario, setDatosFormulario] = useState({
-    puestoId: 'AV-A1-105', // Ejemplo de ID de puesto asignado
+    puestoId: "AV-A1-105", // Ejemplo de ID de puesto asignado
     // Aquí puedes agregar más datos del formulario si es necesario
   });
 
   const handlePaso4Next = () => {
-      // **Simulación de Asignación/Procesamiento**: Aquí podrías aplicar la lógica algorítmica.
-      // Por ahora, usamos el ID mock definido.
-      setDatosFormulario({ puestoId: 'AV-A1-105' }); 
-      setVistaActual(VISTAS.PASO_5);
-  }
+    // **Simulación de Asignación/Procesamiento**: Aquí podrías aplicar la lógica algorítmica.
+    // Por ahora, usamos el ID mock definido.
+    setDatosFormulario({ puestoId: "AV-A1-105" });
+    setVistaActual(VISTAS.PASO_5);
+  };
 
   // 2. Función para renderizar el componente correcto
   const renderContent = () => {
@@ -44,7 +45,11 @@ function App() {
       case VISTAS.INICIO:
         return (
           // Pasamos la función que cambia de vista al botón principal de Bienvenida
-          <Bienvenida onStart={() => setVistaActual(VISTAS.PASO_1)} />
+          <Bienvenida
+            onStart={() => setVistaActual(VISTAS.PASO_1)}
+            onConsultar={() => setVistaActual(VISTAS.CONSULTA)}
+            onNormativa={() => setVistaActual(VISTAS.NORMATIVA)}
+          />
         );
 
       case VISTAS.PASO_1:
@@ -70,7 +75,7 @@ function App() {
             onNext={() => setVistaActual(VISTAS.PASO_4)}
           />
         );
-      
+
       case VISTAS.PASO_4:
         return (
           <RegistroPaso4
@@ -78,18 +83,33 @@ function App() {
             onNext={() => handlePaso4Next()} // --> Ejecuta la lógica simulada y va a Paso 5
           />
         );
-        
-      case VISTAS.PASO_5: 
+
+      case VISTAS.PASO_5:
         return (
-          <RegistroPaso5 
+          <RegistroPaso5
             puestoId={datosFormulario.puestoId}
             onStartAgain={() => setVistaActual(VISTAS.INICIO)}
           />
         );
 
+      case VISTAS.CONSULTA:
+        return (
+          <ConsultaEstado onBackToHome={() => setVistaActual(VISTAS.INICIO)} />
+        );
+
+      case VISTAS.NORMATIVA:
+        return (
+          <NormativaTUPA onBackToHome={() => setVistaActual(VISTAS.INICIO)} />
+        );
 
       default:
-        return <Bienvenida onStart={() => setVistaActual(VISTAS.PASO_1)} />;
+        return (
+          <Bienvenida
+            onStart={() => setVistaActual(VISTAS.PASO_1)}
+            onConsultar={() => setVistaActual(VISTAS.CONSULTA)}
+            onNormativa={() => setVistaActual(VISTAS.NORMATIVA)}
+          />
+        );
     }
   };
 

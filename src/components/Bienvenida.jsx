@@ -1,7 +1,7 @@
 import React from "react";
 import "../index.css";
 
-export default function Bienvenida({ onStart }) {
+export default function Bienvenida({ onStart, onConsultar, onNormativa }) {
   return (
     <div className="app-container">
       <header className="header">
@@ -41,7 +41,7 @@ export default function Bienvenida({ onStart }) {
 
             <button
               className="btn secondary-btn"
-              onClick={() => console.log("Ir a Consulta")}
+              onClick={onConsultar}
             >
               Consultar Estado de Trámite
               <span className="icon">🔍</span>
@@ -49,7 +49,7 @@ export default function Bienvenida({ onStart }) {
 
             <button
               className="btn info-btn"
-              onClick={() => console.log("Ir a Normativa")}
+              onClick={onNormativa}
             >
               Ver Requisitos y Normativa (TUPA)
               <span className="icon">📄</span>
