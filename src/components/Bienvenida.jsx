@@ -61,7 +61,7 @@ export default function Bienvenida({ onStart }) {
 
       <footer className="footer">
         <p>
-          Municipalidad de [Nombre del Distrito Ficticio] - Gerencia de Desarrollo Económico
+          Municipalidad de la Victoria - Gerencia de Desarrollo Económico
         </p>
       </footer>
     </div>
