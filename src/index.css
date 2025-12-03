@@ -1,0 +1,232 @@
+/* ============================
+   VARIABLES DE DISEÑO
+=============================*/
+:root {
+  --primary-color: #c62828;   /* Rojo institucional */
+  --secondary-color: #ef6c00; /* Naranja municipal */
+  --info-color: #0277bd;      /* Azul institucional */
+  --success-color: #2e7d32;
+
+  --text-color: #333;
+  --bg-color: #f5f7fa;
+  --card-bg: #ffffff;
+
+  --radius: 10px;
+  --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* ============================
+   RESETEO BÁSICO
+=============================*/
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg-color);
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+  color: var(--text-color);
+}
+
+/* ============================
+   CONTENEDOR PRINCIPAL
+=============================*/
+.app-container {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 25px;
+  background: var(--card-bg);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ============================
+   HEADER
+=============================*/
+.header {
+  text-align: center;
+  padding-bottom: 20px;
+  border-bottom: 3px solid var(--primary-color);
+}
+
+.header h1 {
+  font-size: 2.3rem;
+  margin: 0;
+  color: var(--primary-color);
+  font-weight: 800;
+}
+
+.header h2 {
+  margin-top: 10px;
+  font-size: 1.1rem;
+  color: #444;
+  opacity: 0.9;
+}
+
+/* ============================
+   WELCOME SECTION
+=============================*/
+.welcome-section {
+  padding: 25px 0;
+}
+
+.welcome-section blockquote {
+  background: #fff7f0;
+  border-left: 6px solid var(--secondary-color);
+  padding: 10px 15px;
+  margin-top: 18px;
+  border-radius: 6px;
+  font-size: 0.95rem;
+}
+
+/* ============================
+   BOTONES
+=============================*/
+.button-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 25px;
+}
+
+.btn {
+  padding: 14px 22px;
+  border: none;
+  border-radius: var(--radius);
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  color: white;
+  transition: 0.25s ease;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn .icon {
+  margin-left: 10px;
+}
+
+.primary-btn { background: var(--primary-color); }
+.primary-btn:hover { background: #b71c1c; }
+
+.secondary-btn { background: var(--secondary-color); }
+.secondary-btn:hover { background: #e65100; }
+
+.info-btn { background: var(--info-color); }
+.info-btn:hover { background: #01579b; }
+
+/* ============================
+   FORMULARIOS (Paso 1 y 2)
+=============================*/
+.form-container {
+  padding: 10px 5px;
+}
+
+.registro-form fieldset {
+  background: #ffffff;
+  border-radius: var(--radius);
+  padding: 20px;
+  margin-bottom: 25px;
+  border: 1px solid #ddd;
+  box-shadow: var(--shadow);
+}
+
+.registro-form legend {
+  padding: 0 10px;
+  font-weight: bold;
+  color: var(--primary-color);
+}
+
+.form-row {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+.half {
+  flex: 1;
+}
+
+.form-group label {
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+input, select, textarea {
+  padding: 10px;
+  font-size: 1rem;
+  border-radius: var(--radius);
+  border: 1px solid #ccc;
+  outline: none;
+  transition: 0.2s ease;
+}
+
+input:focus, select:focus, textarea:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 5px rgba(198, 40, 40, 0.25);
+}
+
+/* ============================
+   PROGRESS BAR / PASO 1–5
+=============================*/
+.progress-bar-container {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.progress-bar {
+  flex: 1;
+  text-align: center;
+  padding: 10px;
+  border-radius: var(--radius);
+  font-size: 0.9rem;
+  font-weight: 600;
+  background: #ddd;
+  color: #555;
+}
+
+.progress-bar.current {
+  background: var(--primary-color);
+  color: white;
+}
+
+.progress-bar.completed {
+  background: var(--success-color);
+  color: white;
+}
+
+/* ============================
+   BOTONES DE NAVEGACIÓN
+=============================*/
+.navigation-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+/* ============================
+   FOOTER
+=============================*/
+.footer {
+  margin-top: 25px;
+  padding-top: 15px;
+  border-top: 1px solid #ccc;
+  text-align: center;
+  font-size: 0.85rem;
+  color: #777;
+}

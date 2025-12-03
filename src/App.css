@@ -1,0 +1,201 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+/* --- Estilos para la interfaz de Registro --- */
+
+.form-container {
+    padding: 30px;
+}
+
+.section-title {
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* Estilos de la barra de progreso */
+.progress-bar-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+    background-color: #eee;
+    border-radius: 4px;
+    padding: 5px;
+}
+
+.progress-bar {
+    flex-grow: 1;
+    text-align: center;
+    padding: 10px 5px;
+    background-color: #ddd;
+    color: #666;
+    border-radius: 4px;
+    font-size: 0.9em;
+    font-weight: 500;
+    margin: 0 2px;
+}
+
+.progress-bar.current {
+    background-color: var(--primary-color);
+    color: white;
+    font-weight: bold;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilos del Formulario */
+.registro-form fieldset {
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin-bottom: 25px;
+    border-radius: 6px;
+}
+
+.registro-form legend {
+    font-weight: bold;
+    color: var(--primary-color);
+    padding: 0 10px;
+    font-size: 1.1em;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-row {
+    display: flex;
+    gap: 20px;
+}
+
+.form-group.half {
+    flex-basis: 50%;
+}
+
+.registro-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.registro-form input[type="text"],
+.registro-form input[type="tel"],
+.registro-form input[type="date"],
+.registro-form select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box; /* Asegura que padding no afecte el ancho total */
+}
+
+.registro-form small {
+    display: block;
+    margin-top: 5px;
+    font-size: 0.8em;
+    color: #888;
+}
+
+/* Botones de navegación */
+.navigation-buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    padding-top: 20px;
+}
+
+.navigation-buttons .btn {
+    padding: 10px 20px;
+    font-size: 1em;
+}
+
+.navigation-buttons .secondary-btn[disabled] {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+/*Barra de progreso completada*/
+
+.progress-bar.completed {
+    background-color: #5cb85c; /* Un verde de éxito */
+    color: white;
+}
+
+/*Registro paso 3*/
+
+:root {
+  --primary-color: #0066cc;
+  --accent-color: #0b82ff;
+}
+
+.section-description {
+  margin-bottom: 15px;
+  font-size: 1rem;
+  color: #444;
+}
+
+textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+  resize: vertical;
+}
+
+.btn {
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+}
+
+.primary-btn {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.secondary-btn {
+  background-color: #bbb;
+  color: #333;
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
